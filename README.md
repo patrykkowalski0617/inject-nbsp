@@ -1,6 +1,6 @@
 ## Inject nbsp
 
-Call injectNbsp function to inject &nbsp;.
+Call injectNbsp function to inject \&nbsp;.
 In order to skip element add class "skip-nbsp" to it.
 It is recommended to wrap each text in html tag:
 
