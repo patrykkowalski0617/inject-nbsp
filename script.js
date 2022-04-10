@@ -5,7 +5,7 @@ const injectNbsp = function ({
   howManyLetters = 1,
 }) {
   const elements = document.querySelectorAll(
-    containerSelector + " *:not(script, .skip-nbsp)"
+    containerSelector + " *:not(script, style, .skip-nbsp)"
   );
 
   const elementsWithText = Array.from(elements).filter(
