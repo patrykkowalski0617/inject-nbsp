@@ -4,15 +4,15 @@ const injectNbsp = function ({
   containerSelector = "body",
   howManyLetters = 1,
 }) {
-  const elements = document.querySelectorAll(containerSelector + " *");
+  const elements = document.querySelectorAll(
+    containerSelector + " *:not(script, .skip-nbsp)"
+  );
 
   const elementsWithText = Array.from(elements).filter(
     (el) =>
       el.firstChild &&
       el.firstChild.textContent.trim().length &&
-      !el.firstChild.innerHTML &&
-      !el.classList.contains("skip-nbsp") &&
-      !el.parentElement.classList.contains("skip-nbsp")
+      !el.firstChild.innerHTML
   );
 
   elementsWithText.forEach((el) => {
